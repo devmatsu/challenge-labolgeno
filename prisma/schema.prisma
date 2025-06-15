@@ -1,0 +1,16 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Device {
+  id           String   @id @default(uuid())
+  name         String
+  brand        String
+  state        String   @default("available")
+  creationTime DateTime @default(now())
+}
