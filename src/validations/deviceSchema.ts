@@ -1,4 +1,5 @@
 import { z } from 'zod';
+
 import { DeviceState } from '../domain/device';
 
 export const createDeviceSchema = z.object({
