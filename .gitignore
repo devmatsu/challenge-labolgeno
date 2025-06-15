@@ -22,3 +22,13 @@ yarn-error.log*
 # OS
 .DS_Store
 Thumbs.db
+
+# Prisma artifacts
+dev.db
+*.sqlite
+*.sqlite-journal
+
+# Ignore generated Prisma client (if using `npx prisma generate` elsewhere)
+prisma/dev.db
+prisma/*.sqlite
+prisma/*.sqlite-journal
