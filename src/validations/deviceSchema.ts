@@ -24,6 +24,9 @@ export const putDeviceSchema = createDeviceSchema.extend({
       message: 'State must be one of: available, in-use, inactive',
     }),
   }),
+  creationTime: z
+    .never({ message: 'creationTime cannot be updated' })
+    .optional(),
 });
 
 export const updateDeviceSchema = z
